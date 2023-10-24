@@ -1,51 +1,105 @@
-* {font-size: large;}
+* {font-size: 22px; 
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bold;
+    }
 
-body {width:100%;
-margin: auto;}
+    html {width: 100%;}
+body {width: 100%;
+margin: 0;}
+
 
 /*navbar*/
 
 .nav {display: flex; 
     flex-direction: row; 
+    flex-basis: auto;
     justify-content: space-between;
+    align-items: center;
     align-content: center;
 flex-wrap: wrap;
 background-color: black;
 color:white;
+position: static;
+width: 100%;
 }
 
-#logo {max-width: 70px;
+#logo {max-width: 120px;
 object-fit:scale-down;
+justify-self: flex-start;
 }
 
-.nav p {
+.nav p {position: absolute;
+    left:50%;
+    right: 50%;
 font-size: 30px;
+transition: all 0.3s ease;
+}
+
+.nav p:hover {font-size: 35px;
+cursor: pointer;
+text-shadow: 2px 2px 2px #ef97e8;
+
 }
 
 ul {display: flex;
-justify-content: center;
+justify-content: right;
+justify-self: right;
 flex-wrap: wrap; 
-width:15%;
+width:20%;
 list-style-type: none;
 margin-right: 50px;
+justify-self: flex-end;
 }
 
-li {padding: 15px; margin-left: 15px;}
+li {padding: 15px; 
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
 
 li:hover {background-color: gray;
-cursor: pointer;
-
+cursor: pointer; 
+border: 1px solid white;
+box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 15px #fff inset;
 }
+
+/*fade1*/
+
+.fade1 {position: static;
+    top:100px;
+    width: 100%;
+    height: 200px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);}
 
 /*main content*/
 
 .container {display: flex;
-padding:200px 50px 200px 50px;
-align-items: center;
+    justify-content: space-around;
+padding:0px 0px 200px 0px;
+align-items: stretch;
 text-align: center;
+width: 100%;
+margin: 0;
 }
 
+.spot {padding: 30px;
+max-width: 400px;
+border: 2px solid black;
+transition: all 0.3s ease;
+}
 
+.spot:hover {box-shadow: 0 0 50px #ef97e8, 0 0 20px #ef97e8, 0 0 15px #fff inset;}
+
+img {max-width: 400px; border:2px solid black;}
+
+input {background-color: white;
+    transition: all 0.2s ease;
+}
+
+input:hover {cursor: pointer;
+background-color: black;
+color:white
+}
 
 /*footer*/
 
@@ -58,5 +112,7 @@ background-color: black;
 color: white;
 }
 
-footer p { text-align: center;   
+footer p { text-align: center; 
+    padding: 0;
+    margin: 10px;  
 }
